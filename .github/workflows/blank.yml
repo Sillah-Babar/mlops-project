@@ -24,13 +24,22 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+        with:
+          python-version: "3.9"
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+        
+      - name: Install dependencies
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Lint with flake8
+        id: flake8
+        continue-on-error: true
+        run: |
+          # fail if there are any flake8 errors
+          flake8 . --count --max-complexity=15 --max-line-length=127 --statistics
+      - name: Check if 'Lint with flake8' step failed
+        if: steps.flake8.outcome != 'success'
+        run: |
+          echo "flake8 fails"
