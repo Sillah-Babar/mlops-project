@@ -1,0 +1,17 @@
+mediapipe
+numpy
+sk-video
+ffmpeg
+scipy
+moviepy
+opencv-python
+keras==2.12.0
+tensorflow==2.12.0
+zarr
+albumentations
+h5py
+jiwer
+scipy
+editdistance
+flask
+fuzzywuzzy
