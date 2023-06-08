@@ -1,0 +1,5 @@
+outs:
+- md5: 8e6b076cf80877b69a18819472d79a57.dir
+  size: 40244145
+  nfiles: 75
+  path: preprocessedDataset
