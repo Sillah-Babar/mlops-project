@@ -1,5 +1,4 @@
-mediapipe
-numpy
+numpy<1.24
 sk-video
 ffmpeg
 scipy
@@ -17,3 +16,4 @@ flask
 fuzzywuzzy
 dvc
 dvc[s3]
+mediapipe==0.9.1.0
