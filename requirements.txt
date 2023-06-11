@@ -19,3 +19,4 @@ dvc[s3]
 mediapipe==0.9.1.0
 mlflow
 jiwer
+apache-airflow
