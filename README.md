@@ -13,8 +13,9 @@ The goal of this project is to help hearing impaired people to communicate with 
 
 ## Achievements:
 
-
+hello
 We have created two successful models that give considerable wer level and character level accuracy. One is a word level model, the other is a character level model. Though there is still a long way to go when it comes to achieving a good accuracy on unseen speakers, yet the model works well on seen speakers.
+
 
 ## Project Design:
 
